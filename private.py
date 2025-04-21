@@ -208,7 +208,7 @@ def handle_attack(message):
     def run_attack():
         global active_attacker, feedback_required, active_attacks
         try:
-            full_command = f"{paradox_PATH} {target} {port} {time_duration} 900"
+            full_command = f"{paradox_PATH} {target} {port} {time_duration} "
             subprocess.run(full_command, shell=True, capture_output=True, text=True)
         finally:
             feedback_required = user_id
